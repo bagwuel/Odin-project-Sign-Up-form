@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|fire|fire-animation|3d">
+</head>
+<body>
+    <div class="hero-container">
+        <h1 class="logo font-effect-fire-animation">BAGWUEL</h1>
+    </div>
+    <div class="form-container">
+        <h1 class="logo-small-screen font-effect-fire-animation">BAGWUEL</h1>
+        <h2 class="font-effect-shadow-multiple">This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!</h2>
+        <h2 class="font-effect-shadow-multiple">Sign Up Now to get Started</h2>
+        <h3>You know you want to.</h3>
+        <form action="" method="post">
+            <p>Let's do this!</p>
+           <div class="controls">
+            <div class="first-name">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required>
+            </div>
+
+            <div class="last-name">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required>
+            </div>
+
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="telephone">
+                <label for="telephone">Telephone</label>
+                <input  class="me" type="tel" name="telephone" id="telephone" required>
+            </div>
+
+            <div class="password" title="password must contain at least one uppercase letter, a number and a special character">
+                <label for="first-name">password</label>
+                <input type="password" name="password" id="password" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_]).{8,}$" required>
+                <p class="password after">*password does not match</p>
+            </div>
+
+            <div class="confirm-password">
+                <label for="confirm-password">Confirm password</label>
+                <input type="password" name="confirm-password" id="confirm-password" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_]).{8,}$" required>
+            </div>
+        </div>
+        <button type="submit" class="submit">Creat Account</button>
+        </form>
+        <p class="have-account">Already have an account? <a href="#">Log in</a></p> 
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

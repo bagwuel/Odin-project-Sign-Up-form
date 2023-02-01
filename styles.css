@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid; */
+}
+
+body {
+    font-family: roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(133, 33, 204, 0.39);
+    display: flex;
+
+}
+.hero-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('./images/background_image.jpg');
+    background-clip: border-box;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 30%;
+}
+
+.logo {
+    color: #fff;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 150px;
+    font-size: 2.5rem;
+}
+
+.form-container {
+    margin-left: 30%;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-container > * {
+    margin-top: 30px;
+}
+
+.form-container h2 {
+    margin-top: unset;
+    font-size: 24px;
+    letter-spacing: 1px;
+} 
+
+form p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+form .controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10%;
+    row-gap: 30px;
+}
+
+form .controls div {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    position: relative;
+}
+
+form .controls div input {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+label::after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
+
+input:focus {
+    appearance: none;
+    box-shadow: 1px 1px 1px 2px rgb(7, 7, 6), 0px 0px 1px 1px rgb(243 183 77);
+    background:-moz-linear-gradient(180deg, rgb(211, 200, 200) 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, rgb(211, 200, 200) 100%); 
+    background:-webkit-linear-gradient(180deg, rgb(211, 200, 200) 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, rgb(211, 200, 200) 100%);
+    background:-o-linear-gradient(180deg, rgb(211, 200, 200) 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, rgb(211, 200, 200) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee82ee', endColorstr='#FFFF00', GradientType=0 );
+    background:-ms-linear-gradient(180deg, rgb(211, 200, 200) 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, rgb(211, 200, 200) 100%);
+    background:linear-gradient(180deg, rgb(211, 200, 200) 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, rgb(211, 200, 200) 100%);
+    border: none;
+    outline: none;
+}
+
+.password.after {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+input:valid{
+color: green;
+}
+
+  
+button {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 50%;
+    padding: 16px 0;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid;
+    cursor: pointer;
+    background:-moz-linear-gradient(170deg, #390d6c 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, #390d6c 100%); 
+    background:-webkit-linear-gradient(170deg, #390d6c 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, #390d6c 100%);
+    background:-o-linear-gradient(170deg, #390d6c 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, #390d6c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee82ee', endColorstr='#FFFF00', GradientType=0 );
+    background:-ms-linear-gradient(170deg, #390d6c 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, #390d6c 100%);
+    background:linear-gradient(170deg, #390d6c 0%, rgb(249, 249, 250) 22%, rgb(249, 249, 250) 72%, #390d6c 100%);
+}
+
+.have-account {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.have-account a {
+    text-decoration: none;
+    color: green;
+    margin-left: 10px;
+}
+
+.logo-small-screen {
+    display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    form .controls {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .form-container h2, .form-container h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        display: block;
+        font-size: 16px;
+        background-image: url('./images/background_image.jpg');
+        background-clip: border-box;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .hero-container {
+        display: none;
+    }
+    .form-container {
+        width: 100%;
+        margin-left: 0;
+        background-color: rgba(210, 164, 243, 0.911);
+    }
+    .form-container h2, .form-container h3 {
+        font-size: 18px;
+    }
+    .logo-small-screen {
+        display: block;
+        margin: 0;
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: rgba(0, 0, 0, 0.548);
+        padding: 10px;
+    }
+}
